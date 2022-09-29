@@ -1,0 +1,110 @@
+solution one
+<div class="galleyColumn">
+                        <figure class="galleryFigure">
+                            
+                                <div class="figImage">
+                                    <div class="imgOverlay"></div>
+                                </div>
+                                
+                            <!-- <img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Trulli" style="width:100%"> -->
+                            <figcaption class="caption">
+                                <div class="caption-icon">
+
+                                </div>
+                                <div class="caption-text">
+                                    <p>Ariana Hashtrudi - 2022</p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+solution two
+<div class="galleyColumn">
+                        <figure class="galleryFigure">
+                            
+                                <div class="FigImage">
+                                    <img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Trulli">
+                                    <div class="imgOverlay"></div>
+                                </div>
+                                
+                            <!-- <img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Trulli" style="width:100%"> -->
+                            <figcaption class="caption">
+                                <div class="caption-icon">
+
+                                </div>
+                                <div class="caption-text">
+                                    <p>Ariana Hashtrudi - 2022</p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+
+                    ************************
+                    <div class="galleyColumn">
+                        <figure class="galleryFigure">
+                            
+                                <div class="figImage">
+                                    <img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Trulli">
+                                    <div class="imgOverlay"></div>
+                                </div>
+                                
+                            <!-- <img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="Trulli" style="width:100%"> -->
+                            <figcaption class="caption">
+                                <div class="caption-icon">
+
+                                </div>
+                                <div class="caption-text">
+                                    <p>Ariana Hashtrudi - 2022</p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+
+                    ***************************
+                    original js
+            let image = document.createElement('img');
+            image.src = galleryImage.image;
+            image.alt = galleryImage.caption;
+
+            let caption = document.createElement('figcaption');
+            caption.classList.add('caption');
+            let figCapIcon = document.createElement('div');
+            figCapIcon.classList.add('caption-icon');
+            let figCapText = document.createElement('div');
+            figCapText.classList.add('caption-text');
+            let figCapParagraph = document.createElement('p');            
+            figCapParagraph.innerText = galleryImage.caption;
+          
+            caption.append(figCapIcon, figCapText);
+            figCapText.appendChild(figCapParagraph);
+            galleryFigure.append(image, caption);
+            columns.appendChild(galleryFigure);
+**************************************************
+let imageDiv = document.createElement('div');
+            imageDiv.classList.add('figImage');
+            // image.style.backgroundImage = `url(${galleryImage.image})`;
+            let image = document.createElement('img');
+            image.src = galleryImage.image;
+            image.alt = galleryImage.caption;
+            let imgOverlay = document.createElement('div');
+            imgOverlay.classList.add('imgOverlay');
+            // let randomHeight = Math.floor(Math.random() * 400) + 250
+            // imgOverlay.style.height = `${randomHeight}px`;                          
+
+            let caption = document.createElement('figcaption');
+            caption.classList.add('caption');
+            let figCapIcon = document.createElement('div');
+            figCapIcon.classList.add('caption-icon');
+            let figCapText = document.createElement('div');
+            figCapText.classList.add('caption-text');
+            let figCapParagraph = document.createElement('p');            
+            figCapParagraph.innerText = galleryImage.caption;
+            
+            //image.appendChild(imgOverlay);
+            imageDiv.append(image, imgOverlay);
+            caption.append(figCapIcon, figCapText);
+            figCapText.appendChild(figCapParagraph);
+            galleryFigure.append(imageDiv, caption);
+            columns.appendChild(galleryFigure);
+                    
